@@ -15,61 +15,70 @@ $(function() {
     $(".notifications").one("click", closeNotification);
   }
 
-  var initiateMovement = function(selector, data, successText, errorText) {
-    $(selector).on("click", function() {
-      $.ajax("http://" + ipAddress + ":8071/motion-control/update", {
-        data: data,
-        dataType: "jsonp",
-        success: function() { displayNotification(successText) },
-        error:   function() { displayNotification(errorText) }
-      });
-    });
-  }
+  // var initiateMovement = function(selector, data, successText, errorText) {
+  //       $.ajax("http://" + ipAddress + ":8071/motion-control/update", {
+  //       data: data,
+  //       dataType: "jsonp",
+  //       success: function() { displayNotification(successText) },
+  //       error:   function() { displayNotification(errorText) }
+  //       // console.log("initiated movement");
+  //     });
+  // }
 
-  var forwardCommand = initiateMovement(
-    ".forward",
-    {forward: 1},
-    "Your MC Hammer Bot is now moving forward.",
-    "Foward command not received."
-  )
+  $('.forward').on("click", function(event){
+    // forwardCommand
+    console.log("Sent Forward Command.");
+    return false;
+  });
 
-  var stopCommand = initiateMovement(
-    ".stop",
-    {forward: 0},
-    "Your MC Hammer Bot is now stopped.",
-    "Stop command not received."
-  )
+  // var forwardCommand = initiateMovement(
+  //   ".forward",
+  //   {forward: 1},
+  //   "Your MC Hammer Bot is now moving forward.",
+  //   "Foward command not received."
+  // );
 
-  var leftTurnCommand = initiateMovement(
-    ".left",
-    {turn: -1},
-    "Your MC HammerBot is now spinning",
-    "Your MC Hammer Bot is probably spinning on fire."
-  )
+//   var reverseCommand = initiateMovement(
+//     ".reverse",
+//     {forward: -1},
+//     "Your MC Hammer Bot is now in reverse.",
+//     "Reverse command not received."
+//   );
 
-  var rightTurnCommand = initiateMovement(
-    ".left",
-    {turn: 1},
-    "Your MC HammerBot is now spinning",
-    "Your MC Hammer Bot is probably spinning on fire."
-  )
+//   var stopCommand = initiateMovement(
+//     ".stop",
+//     {forward: 0},
+//     "Your MC Hammer Bot is now stopped.",
+//     "Stop command not received."
+//   );
 
-  var strifeRightCommand = initiateMovement(
-    ".left",
-    {turn: -1},
-    "Your MC HammerBot is now spinning",
-    "Your MC Hammer Bot is probably spinning on fire."
-  )
+//   var leftTurnCommand = initiateMovement(
+//     ".left",
+//     {turn: -1},
+//     "Your MC HammerBot is now spinning left",
+//    "Left turn command not received."
+//   );
 
-var strifeLeftCommand = initiateMovement(
-    ".left",
-    {turn: -1},
-    "Your MC HammerBot is now spinning",
-    "Your MC Hammer Bot is probably spinning on fire."
-  )
+//   var rightTurnCommand = initiateMovement(
+//     ".right",
+//     {turn: 1},
+//     "Your MC HammerBot is now spinning",
+//     "Right turn command not received."
+//   );
+
+//   var strafeRightCommand = initiateMovement(
+//     ".straferight",
+//     {turn: 1},
+//     "Your MC HammerBot is now moving right",
+//     "Strafe right command not received."
+//   );
+
+// var strafeLeftCommand = initiateMovement(
+//     ".strafeleft",
+//     {turn: -1},
+//     "Your MC HammerBot is now moving left",
+//     "Strafe left command not received."
+//   );
 
 
-
-
-
-})
+});
