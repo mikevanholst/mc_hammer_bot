@@ -1,30 +1,106 @@
 <!DOCTYPE html>
+
 <html>
 <head>
   <title>MC Hammer Bot Controller</title>
-   <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script type="text/javascript" src="mikehammer.js"></script>
+    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="mikehammer.js"></script>
 </head>
+
 <body>
- <body>
+  <div id="container">
+
     <h1>MC Hammerbot</h1>
-    <h3 class="notifications"></h3>
-    <ul>
-      <li><a href="stop">stop</a></li>
-      <li><a href="forward" class="forward">forward</a></li>
-      <li><a href="reverse">reverse</a></li>
-      <li> <a href="left">left</a></li>
-      <li> <a href="right">right</a></li>
-      <li> <a href="strafeLeft">strafeLeft</a></li>
-      <li> <a href="strafeRight">strafeRight</a></li>
-      <li> <a href="forward">forward</a></li>
- </ul>
-  </body>
+    <h3 class="notifications">no notifications</h3>
+    
+    <div id="controller">
 
-</html>
+      <div id="first_row">
+        <ul class="first_row">
+          <li class="button">
+            <a href="#" id="spinLeft" class="spinLeft" class="button">
+            <img src="images/arrow_NW.png"></a></li>
+          <li class="button" >
+            <a href="forward_fast" id="north" class="forward_fast">
+              <img src="images/arrow_north.png"></a></li>
+          <li class="button">
+            <a href="spinRight" id="spinRight" class="spinRight">
+              <img src="images/arrow_NE.png"></a></li>
+        </ul>    
+      </div>
 
+      <div id="second_row">
+        <ul class="first_row">
+         <li class="button">
 
+            <a href="bareLeft" id="NW" class="bareLeft">
+              <img src="images/arrow_NW.png"></a></li>
 
+          <li class="button" >
+            <a href="forward" id="north" class="forward">
+              <img src="images/arrow_north.png"></a></li>
+          <li class="button">
+            <a href="bareRight" id="NE" class="bareRight">
+              <img src="images/arrow_NE.png"></a></li>
+        </ul>    
+      </div>
+     
+      <div id="third_row">
+        <ul class="third_row">
+          <li class="button"> 
+            <a href="strafeLeft" id="west" class="strafeLeft">
+              <img src="images/arrow_west.png"></a></li>
+          <li class="button">
+            <a href="stop" id="stop" class="stop">
+            <img src="images/arrow_north.png"></a></li>
+          <li class="button"> 
+            <a href="strafeRight" id="east"  class="strafeRight">
+              <img src="images/arrow_east.png"></a></li>
+        </ul> 
+      </div>
+      
+      <div id="fourth_row">
+        <ul class="fourth_row">
+          <li class="button"> 
+            <a href="backLeft" id="SW" class="backLeft">
+              <img src="images/arrow_SW.png"> </a></li> 
+          <li class="button">
+            <a href="reverse" id="south" class="reverse">
+              <img src="images/arrow_south.png"></a></li>
+          <li class="button"> 
+            <a href="backRight" id="SE" class="backRight">
+              <img src="images/arrow_SE.png"></a></li>
+        </ul>   
+      </div>
+
+    </div>
+
+      <div id="footer">
+        <h3>Robots Rule</h3>
+      </div>
+
+  </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+

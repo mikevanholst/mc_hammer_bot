@@ -1,0 +1,48 @@
+body {
+    background-color: #fcf7d6
+}
+
+
+#container {
+  width: 800px;
+  margin:auto;
+  height:100%;
+  border: 1px solid black;
+}
+
+#controller {
+  border: 2px solid red;
+  min-width:250px;
+  height:400px;
+  padding: 25px;
+
+}
+
+
+li {
+  
+  list-style-image: none;
+  display: inline; 
+}
+
+
+
+a:hover img {
+background-color: blue;
+
+}
+
+div {
+  margin-bottom: -5px;
+  height:75px;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+    border: 1px solid blue;
+    vertical-align: middle;
+
+
+}

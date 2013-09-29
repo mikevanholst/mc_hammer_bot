@@ -21,12 +21,19 @@ bot.connect()
 
 # callibration = {a: 1, s: 1, d: 1, f: 1}
 
+# "a" represents the back left motor.
+# "s" represents the back right motor.
+# "d" represents the front left motor.
+# "f" represents the front right motor.
+
 bindings =
   forward: {a: +1, s: +1, d: +1, f: +1}
   turn: {a: +1, s: -1, d: +1, f: -1}
   strafe: {a: +1, s: -1, d: -1, f: +1}
+  right: {a: +1, s: 0.5, d: +1, f: 0.5}
+  left: {a: 0.51, s: +1, d: 0.5, f: +1}
 
-motionControlSettings = { forward: 0, turn: 0, strafe: 0 }
+motionControlSettings = { forward: 0, turn: 0, strafe: 0, left: 0, right: 0 }
 
 app = express()
 app.use express.bodyParser()
