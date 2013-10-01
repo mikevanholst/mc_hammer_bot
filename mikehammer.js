@@ -4,7 +4,7 @@ $(function() {
 
 // var ipAddress = "10.0.0.74";
  var ipAddress = "localhost";
-
+ var speed = 0.75;
 
   var closeNotification = function(e) {
     $(".notifications").html("");
@@ -25,6 +25,24 @@ $(function() {
          console.log("Command sent to server");
   };
 
+//  $('#gear_1').on("click", function(event){
+//   $('#gear_1 img').addClass('selected');
+//   console.log("tried to change the class")
+// });
+
+    $('.gear').on("click", function(event){
+      console.log( "new gear chosen");
+      $('.gear img').removeClass('selected')
+      speed = $(this).data('speed');
+      $(this).children('img').addClass('selected');
+      return false;
+    });
+
+
+
+
+
+
     $('.button').on("click", function(event){
     console.log("Stop command has been heard.");
     initiateMovement(
@@ -42,7 +60,7 @@ $(function() {
     console.log(" Forward Command has been heard.");
     initiateMovement(
       ".forward",
-      {forward: 0.8},
+      {forward: 0.1 * speed},
       "Your MC Hammer Bot is now moving forward.",
       "Foward command not received."
     );
@@ -53,7 +71,7 @@ $(function() {
     console.log(" Forward fast command has been heard.");
     initiateMovement(
       ".forward_fast",
-      {forward: 1},
+      {forward: speed},
       "Your MC Hammer Bot is now moving forward a top speed.",
       "Foward command not received."
     );
@@ -64,7 +82,7 @@ $(function() {
     console.log(" Bare right command has been heard.");
     initiateMovement(
       ".bareRight",
-      {right: 0.8},
+      {right: speed},
       "Your MC Hammer Bot is now bearing right.",
       "Bare right command not received."
     );
@@ -75,7 +93,7 @@ $(function() {
     console.log(" Back right command has been heard.");
     initiateMovement(
       ".backRight",
-      {right: -0.8},
+      {right: -1*speed},
       "Your MC Hammer Bot is now backing right.",
       "Back right command not received."
     );
@@ -86,7 +104,7 @@ $('.bareLeft').on("mouseover", function(event){
     console.log(" Bare left has been heard.");
     initiateMovement(
       ".bareLeft",
-      {left: 0.8},
+      {left: speed},
       "Your MC Hammer Bot is now bearing left.",
       "Bare left command not received."
     );
@@ -97,7 +115,7 @@ $('.bareLeft').on("mouseover", function(event){
     console.log(" Back left command has been heard.");
     initiateMovement(
       ".backLeft",
-      {left: -0.8},
+      {left: -1*speed},
       "Your MC Hammer Bot is now backing left.",
       "Back left command not received."
     );
@@ -108,7 +126,7 @@ $('.bareLeft').on("mouseover", function(event){
     console.log("Reverse Command has been heard.");
     initiateMovement(
       ".reverse",
-      {forward: -0.8},
+      {forward: -1*speed},
       "Your MC Hammer Bot is now in reverse.",
       "Reverse command not received."
     );
@@ -131,7 +149,7 @@ $('.bareLeft').on("mouseover", function(event){
     console.log("Pivot left command has been heard.");
     initiateMovement(
       ".spinLeft",
-      {turn: -0.8},
+      {turn: -1*speed},
       "Your MC HammerBot is now spinning left",
      "Pivot left command not received."
     );
@@ -142,9 +160,9 @@ $('.spinRight').on("mouseover", function(event){
     console.log("Pivot right command has been heard.");
     initiateMovement(
       ".spinRight",
-      {turn: 0.8},
+      {turn: speed},
       "Your MC HammerBot is now pivoting right",
-     "Spin right command not received."
+     "PIvot right command not received."
     );
     return false;
   });
@@ -165,7 +183,7 @@ $('.spinRight').on("mouseover", function(event){
     console.log("Strafe right command has been heard.");
     initiateMovement(
       ".strafeRight",
-      {strafe: -0.8},
+      {strafe: -1*speed},
       "Your MC HammerBot is now moving right",
       "Strafe right command not received."
      );
@@ -177,7 +195,7 @@ $('.spinRight').on("mouseover", function(event){
     console.log("Strafe left command has been heard.");
   var strafeLeftCommand = initiateMovement(
     ".strafeLeft",
-    {strafe: 0.8},
+    {strafe: speed},
     "Your MC HammerBot is now moving left",
     "Strafe left command not received."
     );

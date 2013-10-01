@@ -1,7 +1,10 @@
 body {
-    background-color: #fcf7d6
+  background-color: #fcf7d6;
 }
 
+li.gears {
+  margin-left: 25px;
+}
 
 #container {
   width: 800px;
@@ -20,16 +23,16 @@ body {
 
 
 li {
-  
-  list-style-image: none;
+    list-style-image: none;
   display: inline; 
 }
 
-
+.selected {
+  background-color: blue;
+}
 
 a:hover img {
 background-color: blue;
-
 }
 
 div {
@@ -37,12 +40,14 @@ div {
   height:75px;
 }
 
+
+
+
 img {
   width: 60px;
   height: 60px;
   padding: 10px;
     border: 1px solid blue;
     vertical-align: middle;
-
-
+    border-radius: 5px
 }
