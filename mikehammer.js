@@ -42,7 +42,7 @@ $(function() {
 
 
 
-
+    // stopped
     $('.button').on("click", function(event){
     console.log("Stop command has been heard.");
     initiateMovement(
@@ -56,21 +56,21 @@ $(function() {
 
 
 
-  $('.forward').on("mouseover", function(event){
-    console.log(" Forward Command has been heard.");
+  $('.forward_slow').on("mouseover", function(event){
+    console.log(" Forward slow command has been heard.");
     initiateMovement(
-      ".forward",
-      {forward: 0.1 * speed},
+      ".forward_slow",
+      {forward: 0.5 * speed},
       "Your MC Hammer Bot is now moving forward.",
-      "Foward command not received."
+      "Foward slow command not received."
     );
     return false;
   });
 
-  $('.forward_fast').on("mouseover", function(event){
-    console.log(" Forward fast command has been heard.");
+  $('.forward').on("mouseover", function(event){
+    console.log(" Forward command has been heard.");
     initiateMovement(
-      ".forward_fast",
+      ".forward",
       {forward: speed},
       "Your MC Hammer Bot is now moving forward a top speed.",
       "Foward command not received."
